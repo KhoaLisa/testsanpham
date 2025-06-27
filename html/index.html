@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website với Ảnh nền thay đổi</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body style="height: 5000px">
+    <!-- MENU -->
+    <header class="menu" id="menu">
+      <nav class="nav-links">
+        <!-- PHÍA TRÁI -->
+        <a href="./index.html" class="nav-item active">
+          <div class="icon-text">
+            <i class="fa-solid fa-house"></i>
+            <span>TRANG CHỦ</span>
+          </div>
+        </a>
+        <a href="./giớiThieu.html" class="nav-item">
+          <div class="icon-text">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>GIỚI THIỆU</span>
+          </div>
+        </a>
+        <a href="./DichVu.html" class="nav-item">
+          <div class="icon-text">
+            <i class="fa-solid fa-gear"></i>
+            <span>DỊCH VỤ</span>
+          </div>
+        </a>
+
+        <!-- LOGO CHÍNH Ở GIỮA -->
+        <div class="nav-logo">
+          <a href="#home">
+            <img src="/img/logostart.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- PHÍA PHẢI -->
+        <a href="./KhuyenMai.html" class="nav-item">
+          <div class="icon-text">
+            <i class="fa-solid fa-gift"></i>
+            <span>KHUYẾN MÃI</span>
+          </div>
+        </a>
+        <a href="./TuyenDung.html" class="nav-item">
+          <div class="icon-text">
+            <i class="fa-solid fa-user"></i>
+            <span>TUYỂN DỤNG</span>
+          </div>
+        </a>
+        <a href="./LienHe.html" class="nav-item">
+          <div class="icon-text">
+            <i class="fa-solid fa-envelope"></i>
+            <span>LIÊN HỆ</span>
+          </div>
+        </a>
+      </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <!-- ✅ đã sửa -->
+
+      <img src="/img/so3.jpg" class="slide active" id="bg1" />
+      <img src="/img/so2.jpg" class="slide" id="bg2" />
+      <img src="/img/so1.webp" class="slide" id="bg2" />
+      <img src="/img/so4.webp" class="slide" id="bg2" />
+      <img src="/img/so5.jpg" class="slide" id="bg2" />
+      <div class="controls">
+        <button id="prev">⟨</button>
+        <button id="next">⟩</button>
+      </div>
+    </section>
+    <!-- logo ứng dụng -->
+    <div class="fixed-icons">
+      <a
+        href="https://www.facebook.com/profile.php?id=61577403387519  "
+        target="_blank"
+        title="Messenger"
+      >
+        <img src="/img/Facebook_Messenger_logo_2020.svg.webp" alt="Messenger" />
+      </a>
+      <a href="https://zalo.me/0389940515" target="_blank" title="Zalo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+          alt="Zalo"
+        />
+      </a>
+      <a
+        href="https://www.google.com/maps/place/Star+Vip+Massage/@21.0003004,105.80304,884m/data=!3m1!1e3!4m6!3m5!1s0x3135ab3114692baf:0x26a46723ac0a1eed!8m2!3d21.0003004!4d105.80304!16s%2Fg%2F11x71j32ys?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        title="Map"
+      >
+        <img src="/img/ggmap2.png" alt="Map" />
+      </a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <h5><em>What's in?</em></h5>
+        <h2>NGOC ANH STAR 339</h2>
+        <p class="highlight">Experience endless relaxing care</p>
+        <p>
+          Enjoy the small joys in life in the peaceful space of Ngoc Anh Star
+          339. Our specialized treatments awaken the senses and bring complete
+          relaxation.
+        </p>
+        <p>
+          Treatment options at our spa provide a multi-sensory journey in a
+          soothing space. Our services include full body therapy, hot stone
+          massage, and more — ensuring the most relaxing experience for our
+          customers.
+        </p>
+        <button>SEE MORE</button>
+      </div>
+      <div class="img-hover-wrapper">
+        <img src="/img/Conjuring_2.jpg" alt="Preview" class="vip-img" />
+        <div class="hover-overlay">
+          <div class="shine"></div>
+          <a href="https://example.com" class="hover-button">XEM NGAY</a>
+        </div>
+      </div>
+    </section>
+    <!-- video Star -->
+    <div class="videoStar">
+      <video autoplay muted loop playsinline>
+        <source src="/video/1.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
