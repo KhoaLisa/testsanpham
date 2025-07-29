@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website với Ảnh nền thay đổi</title>
+    <link rel="stylesheet" href="/css/dichvu/vip.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;500;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          once: false, // Cho phép hiệu ứng lặp lại khi cuộn
+          offset: 120,
+          duration: 800,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="menu" id="menu">
+      <nav class="main-nav">
+        <div class="nav-left">
+          <a href="/html/index.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-house"></i>
+              <span data-lang-vi="TRANG CHỦ" data-lang-en="HOME"
+                >TRANG CHỦ</span
+              >
+            </div>
+          </a>
+          <a href="./dichvu.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-gear"></i>
+              <span
+                data-lang-vi="DỊCH VỤ"
+                data-lang-en="SERVICES"
+                class="active"
+                >DỊCH VỤ</span
+              >
+            </div>
+          </a>
+          <a href="/html/gioithieu.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-gift"></i>
+              <span data-lang-vi="GIỚI THIỆU" data-lang-en="INTRODUCE"
+                >GIỚI THIỆU</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="nav-logo">
+          <a href="#home">
+            <img src="/img/logo start.png" alt="Logo STAR VIP MASSAGE" />
+          </a>
+        </div>
+        <div class="nav-right">
+          <a href="./TuyenDung.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-user"></i>
+              <span data-lang-vi="TUYỂN DỤNG" data-lang-en="RECRUIT"
+                >TUYỂN DỤNG</span
+              >
+            </div>
+          </a>
+          <a href="./LienHe.html" class="nav-item">
+            <div class="icon-text">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-lang-vi="LIÊN HỆ" data-lang-en="CONTACT">LIÊN HỆ</span>
+            </div>
+          </a>
+          <div
+            class="nav-item language-switcher"
+            id="languageSwitcher"
+            role="button"
+            aria-expanded="false"
+            aria-controls="langOptions"
+          >
+            <div class="icon-text">
+              <img
+                src="https://flagcdn.com/w40/vn.png"
+                alt="Cờ Việt Nam"
+                class="icon"
+              />
+              <span>NGÔN NGỮ</span>
+            </div>
+            <ul class="lang-options" id="langOptions">
+              <li data-lang="vi">
+                <img src="https://flagcdn.com/w40/vn.png" alt="Cờ Việt Nam" />
+                Tiếng Việt
+              </li>
+              <li data-lang="en">
+                <img src="https://flagcdn.com/w40/gb.png" alt="Cờ Anh" />
+                English
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- icon ứng dụng -->
+    <div class="fixed-icons" data-aos="fade-left" data-aos-duration="1000">
+      <a
+        href="https://www.facebook.com/profile.php?id=61577403387519"
+        target="_blank"
+        title="Messenger"
+      >
+        <img src="/img/mess.webp" alt="Biểu tượng Messenger" />
+      </a>
+      <a href="https://zalo.me/0878078023" target="_blank" title="Zalo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+          alt="Biểu tượng Zalo"
+        />
+      </a>
+      <a
+        href="https://www.google.com/maps/place/Star+Vip+Massage/@21.0003004,105.80304"
+        target="_blank"
+        title="Map"
+      >
+        <img src="/img/map.png" alt="Biểu tượng Google Maps" />
+      </a>
+    </div>
+
+    <!-- VIP I -->
+    <div class="combo-banner">
+      <h2
+        data-lang-vi="VIP I – Nơi Cảm Xúc Thăng Hoa"
+        data-lang-en="VIP I – Where Emotions Rise"
+      >
+        VIP I – Nơi Cảm Xúc Thăng Hoa
+      </h2>
+    </div>
+
+    <div class="container">
+      <div class="left-column">
+        <img src="/img/img_NV/vip1.png" alt="VIP I" />
+      </div>
+
+      <div class="right-column">
+        <h2
+          data-lang-vi="VIP I – Nơi Cảm Xúc Thăng Hoa"
+          data-lang-en="VIP I – Where Emotions Rise"
+        >
+          VIP I – Nơi Cảm Xúc Thăng Hoa
+        </h2>
+
+        <p>
+          <strong
+            data-lang-vi="Liệu trình thư giãn tại gồm có:"
+            data-lang-en="Relaxation package includes:"
+            >Liệu trình thư giãn tại gồm có:</strong
+          >
+        </p>
+
+        <ul>
+          <li
+            data-lang-vi="Xông hơi, ngâm chân muối khoáng"
+            data-lang-en="Steam bath, salt foot soak"
+          >
+            Xông hơi, ngâm chân muối khoáng
+          </li>
+          <li
+            data-lang-vi="Massage trườn tinh dầu Nuru trị liệu và thư giãn không giới hạn (miễn phí tinh dầu)"
+            data-lang-en="Unlimited Nuru essential oil massage (free essential oils)"
+          >
+            Massage trườn tinh dầu Nuru trị liệu và thư giãn không giới hạn
+            (miễn phí tinh dầu)
+          </li>
+          <li
+            data-lang-vi="Massage body, H.. , B.."
+            data-lang-en="Body massage, H.., B.."
+          >
+            Massage body, H.. , B..
+          </li>
+          <li
+            data-lang-vi="Giá vé 600k – giảm giá 490k"
+            data-lang-en="Ticket price 600k – discount 490k"
+          >
+            Giá vé 600k – giảm giá 490k
+          </li>
+          <li data-lang-vi="Tip 500k" data-lang-en="Tip 500k">Tip 500k</li>
+          <li data-lang-vi="Combo: 990k" data-lang-en="Combo: 990k">
+            Combo: 990k
+          </li>
+          <li
+            data-lang-vi="Thời gian: 70 phút."
+            data-lang-en="Duration: 70 minutes."
+          >
+            Thời gian: 70 phút.
+          </li>
+        </ul>
+
+        <p
+          class="note"
+          data-lang-vi="*Lưu ý: Quý khách có thể đổi/chọn nhân viên thoải mái. Thời lượng, thứ tự quy trình các bước massage có thể thay đổi tùy yêu cầu khách hàng và nhân viên."
+          data-lang-en="*Note: You can freely change/select staff. Duration and massage steps can be adjusted based on customer and staff requests."
+        >
+          *Lưu ý: Quý khách có thể đổi/chọn nhân viên thoải mái. Thời lượng, thứ
+          tự quy trình các bước massage có thể thay đổi tùy yêu cầu khách hàng
+          và nhân viên.
+        </p>
+
+        <div class="footer-info">
+          <span
+            data-lang-vi="Thời gian: 70 phút"
+            data-lang-en="Duration: 70 minutes"
+            >Thời gian: 70 phút</span
+          >
+          <span
+            class="price"
+            data-lang-vi="600.000 VNĐ"
+            data-lang-en="600,000 VND"
+            >600.000 VNĐ</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- GỢI Ý COMBO KHÁC -->
+    <div class="combo-suggestions">
+      <h3>Các Combo Khác</h3>
+      <div class="combo-list">
+        <a href="/html/dichvu/vip2.html" class="combo-item">
+          <img src="/img/img_NV/vip2.jpg" alt="Combo VIP II" />
+          <h2
+            data-lang-vi="VIP II – Tận Hưởng Thiên Đường"
+            data-lang-en="VIP II – Paradise Experience"
+          >
+            VIP II – Tận Hưởng Thiên Đường
+          </h2>
+        </a>
+        <a href="/html/dichvu/vip3.html" class="combo-item">
+          <img src="/img/so7.jpg" alt="Combo Super VIP" />
+          <h2
+            data-lang-vi="VIP III – Đẳng Cấp Đế Vương"
+            data-lang-en="VIP III – Royal Class Experience"
+          >
+            VIP III – Đẳng Cấp Đế Vương
+          </h2>
+        </a>
+        <a href="/html/dichvu/vip4.html" class="combo-item">
+          <img src="/img/img_NV/vip3.jpg" alt="Combo Relax" />
+          <h2
+            data-lang-vi="VIP IV – King Pool Party"
+            data-lang-en="VIP IV – King Pool Party"
+          >
+            VIP IV – King Pool Party
+          </h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Google map các cơ sở -->
+    <section class="branches">
+      <div class="branch">
+        <h3>CS1 – STAR VIP MASSAGE</h3>
+        <p>02 Ngụy Như Kon Tum, Thanh Xuân, Hà Nội</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8086680886104!2d105.80045971089363!3d21.00030538867429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab3114692baf%3A0x26a46723ac0a1eed!2sStar%20Vip%20Massage!5e0!3m2!1svi!2s!4v1752144344011!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS2 – GOLD VIP MASSAGE</h3>
+        <p>136 Hồ Tùng Mậu (Cổng KĐT Goldmark City)</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.733316194059!2d105.7693767!3d21.043354100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4739e50b93%3A0x2b94e91c691994b5!2sGold%20Vip%20Massage!5e0!3m2!1svi!2s!4v1752244555724!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS3 – X-MEN VIP MASSAGE</h3>
+        <p>222 Cầu Bươu – Xa La – Hà Đông</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.7372449374107!2d105.7963386!3d20.963064499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad26531b23dd%3A0x35e47b1ecc387067!2sXmen2%20Massage!5e0!3m2!1svi!2s!4v1752144102885!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS4 – NNL VIP MASSAGE</h3>
+        <p>609 Lạc Long Quân – Tây Hồ</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.139925404322!2d105.80821711089519!3d21.0670728863806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab774ffe258d%3A0xdb8180fc918225f8!2zTWFzc2FnZSBOdXJ1IE5o4bqtdCBOZ3V54buHdCBM4bqndQ!5e0!3m2!1svi!2s!4v1752144300766!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS5 – MIDU VIP MASSAGE</h3>
+        <p>178 Đình Thôn, Mỹ Đình, Hà Nội</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.388938987031!2d105.77253511089404!3d21.017118088097423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455b722f011ed%3A0xc0a2ab9ecd136b2!2sVip%20Massage%20MIDU!5e0!3m2!1svi!2s!4v1752144380931!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="branch">
+        <h3>CS6 – MISAKI VIP MASSAGE</h3>
+        <p>41 Nguyễn Như Uyên – Cầu Giấy – Hà Nội</p>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3332254575016!2d105.78432031089413!3d21.019348788020753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab2e26dcd5f3%3A0xa8cf0b2c8e038c9a!2sMisaki%20Massage!5e0!3m2!1svi!2s!4v1752144250927!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <script src="/js/main2.js"></script>
+  </body>
+</html>

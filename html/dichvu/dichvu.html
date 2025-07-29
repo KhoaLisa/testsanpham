@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website với Ảnh nền thay đổi</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dichvu/style2.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -13,15 +13,26 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Poppins:wght@400;600&family=Quicksand:wght@400;500;600&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          once: false, // Cho phép hiệu ứng lặp lại khi cuộn
+          offset: 120,
+          duration: 800,
+        });
+      });
+    </script>
   </head>
   <body>
     <header class="menu" id="menu">
       <nav class="main-nav">
         <div class="nav-left">
-          <a href="./index.html" class="nav-item">
+          <a href="/html/index.html" class="nav-item">
             <div class="icon-text">
               <i class="fa-solid fa-house"></i>
-              <span data-lang-vi="TRANG CHỦ" data-lang-en="HOME" class="active"
+              <span data-lang-vi="TRANG CHỦ" data-lang-en="HOME"
                 >TRANG CHỦ</span
               >
             </div>
@@ -29,7 +40,10 @@
           <a href="/html/dichvu/dichvu.html" class="nav-item">
             <div class="icon-text">
               <i class="fa-solid fa-gear"></i>
-              <span data-lang-vi="DỊCH VỤ" data-lang-en="SERVICES"
+              <span
+                data-lang-vi="DỊCH VỤ"
+                data-lang-en="SERVICES"
+                class="active"
                 >DỊCH VỤ</span
               >
             </div>
@@ -63,7 +77,13 @@
               <span data-lang-vi="LIÊN HỆ" data-lang-en="CONTACT">LIÊN HỆ</span>
             </div>
           </a>
-          <div class="nav-item language-switcher" id="languageSwitcher">
+          <div
+            class="nav-item language-switcher"
+            id="languageSwitcher"
+            role="button"
+            aria-expanded="false"
+            aria-controls="langOptions"
+          >
             <div class="icon-text">
               <img
                 src="https://flagcdn.com/w40/vn.png"
@@ -87,44 +107,8 @@
       </nav>
     </header>
 
-    <section class="hero" id="home">
-      <img
-        src="/img/img_NV/real1.jpg"
-        class="slide active"
-        loading="lazy"
-        alt="Hình ảnh quảng cáo 1"
-      />
-      <img
-        src="/img/img_NV/real3.jpg"
-        class="slide"
-        loading="lazy"
-        alt="Hình ảnh quảng cáo 2"
-      />
-      <img
-        src="/img/img_NV/real4.jpg"
-        class="slide"
-        loading="lazy"
-        alt="Hình ảnh quảng cáo 3"
-      />
-      <img
-        src="/img/img_NV/real5.jpg"
-        class="slide"
-        loading="lazy"
-        alt="Hình ảnh quảng cáo 4"
-      />
-      <img
-        src="/img/img_NV/real2.jpg"
-        class="slide"
-        loading="lazy"
-        alt="Hình ảnh quảng cáo 6"
-      />
-      <div class="controls">
-        <button id="prev">⟨</button>
-        <button id="next">⟩</button>
-      </div>
-    </section>
-
-    <div class="fixed-icons">
+    <!-- icon ứng dụng -->
+    <div class="fixed-icons" data-aos="fade-left" data-aos-duration="1000">
       <a
         href="https://www.facebook.com/profile.php?id=61577403387519"
         target="_blank"
@@ -147,301 +131,6 @@
       </a>
     </div>
 
-    <!-- SECTION GIỚI THIỆU -->
-    <section class="intro-section">
-      <div class="intro-text">
-        <h5>
-          <em data-lang-vi="Có gì mới?" data-lang-en="What's in?"
-            >Có gì mới?</em
-          >
-        </h5>
-        <h2 data-lang-vi="STAR VIP MASSAGE" data-lang-en="STAR VIP MASSAGE">
-          STAR VIP MASSAGE
-        </h2>
-        <p
-          class="highlight"
-          data-lang-vi="Trải nghiệm chăm sóc thư giãn bất tận"
-          data-lang-en="Experience endless relaxing care"
-        >
-          Trải nghiệm chăm sóc thư giãn bất tận
-        </p>
-
-        <p
-          data-lang-vi="Vip massage - nơi đẳng cấp thư giãn dành cho các quý ông. Với 6 cơ sở, và hơn 5 năm kinh nghiệm, chúng tôi tin rằng sẽ mang đến cho mọi quý ông những trải nghiệm tuyệt vời nhất. Sau những giờ làm việc căng thẳng, các kỹ thuật viên với tay nghề cao và khuôn mặt xinh xắn sẽ giúp các quý ông tìm lại được cảm xúc mãnh liệt nhất."
-          data-lang-en="Vip Massage – the premier relaxation destination for gentlemen. With 6 locations and over 5 years of experience, we are confident in delivering the best experiences. After stressful working hours, our skilled and charming technicians will help gentlemen rediscover their most intense emotions."
-        >
-          Vip massage - nơi đẳng cấp thư giãn dành cho các quý ông. Với 6 cơ sở,
-          và hơn 5 năm kinh nghiệm, chúng tôi tin rằng sẽ mang đến cho mọi quý
-          ông những trải nghiệm tuyệt vời nhất. Sau những giờ làm việc căng
-          thẳng, các kỹ thuật viên với tay nghề cao và khuôn mặt xinh xắn sẽ
-          giúp các quý ông tìm lại được cảm xúc mãnh liệt nhất.
-        </p>
-
-        <p
-          data-lang-vi="Hệ thống lên tới gần 100 phòng massage, gồm các hạng phòng thường và VIP được thiết kế trang nhã, sang trọng. Nhân viên chăm sóc tận tình, được tuyển chọn kỹ lưỡng, đảm bảo chất lượng từ Bắc vào Nam. Đặc biệt, hệ thống bồn sục, phòng xông hơi, bể tắm lớn, hoa quả và rượu ngon đang chờ phục vụ quý khách."
-          data-lang-en="Our system features nearly 100 massage rooms, including both standard and VIP classes, elegantly and luxuriously designed. Staff are meticulously selected and provide dedicated care, ensuring consistent quality from North to South. Especially, jacuzzi tubs, steam rooms, large baths, fresh fruit, and premium wine await to serve you."
-        >
-          Hệ thống lên tới gần 100 phòng massage, gồm các hạng phòng thường và
-          VIP được thiết kế trang nhã, sang trọng. Nhân viên chăm sóc tận tình,
-          được tuyển chọn kỹ lưỡng, đảm bảo chất lượng từ Bắc vào Nam. Đặc biệt,
-          hệ thống bồn sục, phòng xông hơi, bể tắm lớn, hoa quả và rượu ngon
-          đang chờ phục vụ quý khách.
-        </p>
-
-        <p
-          data-lang-vi="Hãy đến ngay hệ thống của Vip massage để được trải nghiệm và nhận những ưu đãi đặc biệt nhất!"
-          data-lang-en="Visit the Vip Massage system today to experience it yourself and receive the most exclusive offers!"
-        >
-          Hãy đến ngay hệ thống của Vip massage để được trải nghiệm và nhận
-          những ưu đãi đặc biệt nhất!
-        </p>
-
-        <a href="./dichvu/dichvu.html">
-          <button
-            class="wavy-button"
-            data-lang-vi="XEM NGAY"
-            data-lang-en="SEE MORE"
-          >
-            XEM NGAY
-          </button>
-        </a>
-      </div>
-
-      <section class="single-image-wrapper">
-        <div class="img-hover-wrapper">
-          <img
-            src="/img/img_NV/nv1.jpg"
-            alt="Nhân viên massage tại STAR VIP MASSAGE"
-            class="vip-img"
-            loading="lazy"
-          />
-          <div class="hover-overlay">
-            <div class="shine"></div>
-            <a
-              href="/html/dichvu/dichvu.html"
-              class="hover-button"
-              data-lang-vi="XEM NGAY"
-              data-lang-en="SEE NOW"
-              >XEM NGAY</a
-            >
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- Vì Sao Chọn Chúng Tôi -->
-    <section class="why-choose-us">
-      <div class="why-header">
-        <img
-          src="/img/icon/bantay2.png"
-          alt="Biểu tượng STAR VIP MASSAGE"
-          class="why-logo"
-          loading="lazy"
-        />
-
-        <h2
-          class="why-title"
-          data-lang-vi="Vì Sao Chọn Chúng Tôi"
-          data-lang-en="Why Choose Us"
-        >
-          Vì Sao Chọn Chúng Tôi
-        </h2>
-
-        <p
-          class="why-description"
-          data-lang-vi="Hãy tận hưởng những niềm vui giản dị trong cuộc sống tại không gian yên bình của STAR VIP MASSAGE. Những liệu pháp trị liệu chuyên sâu tại đây sẽ đánh thức mọi giác quan, mang lại sự thư giãn tuyệt đối. Việc lựa chọn chăm sóc tại không gian của chúng tôi là hành trình trải nghiệm đa giác quan, nơi thư giãn và phục hồi giao thoa một cách trọn vẹn."
-          data-lang-en="Enjoy the simple pleasures of life in the peaceful ambiance of STAR VIP MASSAGE. Our intensive therapy treatments awaken the senses and offer complete relaxation. Choosing our space means embarking on a multi-sensory journey where relaxation and restoration seamlessly blend."
-        >
-          Hãy tận hưởng những niềm vui giản dị trong cuộc sống tại không gian
-          yên bình của
-          <strong>STAR VIP MASSAGE</strong>. Những liệu pháp trị liệu chuyên sâu
-          tại đây sẽ đánh thức mọi giác quan, mang lại sự thư giãn tuyệt đối.
-          Việc lựa chọn chăm sóc tại không gian của chúng tôi là hành trình trải
-          nghiệm đa giác quan, nơi <em>thư giãn</em> và <em>phục hồi</em> giao
-          thoa một cách trọn vẹn.
-        </p>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon-wrapper delay-0">
-            <img
-              src="/img/icon/1.png"
-              alt="Biểu tượng không gian thư giãn sang trọng"
-              class="why-icon"
-              loading="lazy"
-            />
-          </div>
-          <h4 data-lang-vi="Không gian thư giãn" data-lang-en="Relaxing Space">
-            Không gian thư giãn
-          </h4>
-        </div>
-        <div class="why-item">
-          <div class="why-icon-wrapper delay-1">
-            <img
-              src="/img/icon/2.png"
-              alt="Biểu tượng đội ngũ chuyên nghiệp"
-              class="why-icon"
-              loading="lazy"
-            />
-          </div>
-          <h4
-            data-lang-vi="Đội ngũ chuyên nghiệp"
-            data-lang-en="Professional Team"
-          >
-            Đội ngũ chuyên nghiệp
-          </h4>
-        </div>
-        <div class="why-item">
-          <div class="why-icon-wrapper delay-2">
-            <img
-              src="/img/icon/3.png"
-              alt="Biểu tượng combo ưu đãi"
-              class="why-icon"
-              loading="lazy"
-            />
-          </div>
-          <h4 data-lang-vi="Combo ưu đãi" data-lang-en="Special Combo Offers">
-            Combo ưu đãi
-          </h4>
-        </div>
-        <div class="why-item">
-          <div class="why-icon-wrapper delay-3">
-            <img
-              src="/img/icon/4.png"
-              alt="Biểu tượng giá cả hợp lý"
-              class="why-icon"
-              loading="lazy"
-            />
-          </div>
-          <h4 data-lang-vi="Giá cả hợp lý" data-lang-en="Reasonable Pricing">
-            Giá cả hợp lý
-          </h4>
-        </div>
-      </div>
-      <!-- Ảnh cơ sở -->
-      <div class="image-carousel">
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track">
-            <div class="image-item">
-              <div class="img-hover-wrapper">
-                <a href="/html/dichvu/dichvu.html" class="image-link">
-                  <img
-                    src="/img/img_NV/cs1.jpg"
-                    class="vip-img"
-                    loading="lazy"
-                    alt="Cơ sở 1 STAR VIP MASSAGE"
-                  />
-                  <div class="hover-overlay">
-                    <span
-                      class="hover-button"
-                      data-lang-vi="Xem ngay"
-                      data-lang-en="See now"
-                    >
-                      Xem ngay
-                    </span>
-                  </div>
-                  <div class="shine"></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="image-item">
-              <div class="img-hover-wrapper">
-                <a href="/html/dichvu/dichvu.html" class="image-link">
-                  <img
-                    src="/img/img_NV/cs2.jpg"
-                    class="vip-img"
-                    loading="lazy"
-                    alt="Cơ sở 2 GOLD VIP MASSAGE"
-                  />
-                  <div class="hover-overlay">
-                    <span
-                      class="hover-button"
-                      data-lang-vi="Xem ngay"
-                      data-lang-en="See now"
-                    >
-                      Xem ngay
-                    </span>
-                  </div>
-                  <div class="shine"></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="image-item">
-              <div class="img-hover-wrapper">
-                <a href="/html/dichvu/dichvu.html" class="image-link">
-                  <img
-                    src="/img/img_NV/cs3.jpg"
-                    class="vip-img"
-                    loading="lazy"
-                    alt="Cơ sở 3 X-MEN VIP MASSAGE"
-                  />
-                  <div class="hover-overlay">
-                    <span
-                      class="hover-button"
-                      data-lang-vi="Xem ngay"
-                      data-lang-en="See now"
-                    >
-                      Xem ngay
-                    </span>
-                  </div>
-                  <div class="shine"></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="image-item">
-              <div class="img-hover-wrapper">
-                <a href="/html/dichvu/dichvu.html" class="image-link">
-                  <img
-                    src="/img/img_NV/cs4.jpg"
-                    class="vip-img"
-                    loading="lazy"
-                    alt="Cơ sở 4 NNL VIP MASSAGE"
-                  />
-                  <div class="hover-overlay">
-                    <span
-                      class="hover-button"
-                      data-lang-vi="Xem ngay"
-                      data-lang-en="See now"
-                    >
-                      Xem ngay
-                    </span>
-                  </div>
-                  <div class="shine"></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="image-item">
-              <div class="img-hover-wrapper">
-                <a href="/co-so-5" class="image-link">
-                  <img
-                    src="/img/img_NV/cs5.jpg"
-                    class="vip-img"
-                    loading="lazy"
-                    alt="Cơ sở 5 MIDU VIP MASSAGE"
-                  />
-                  <div class="hover-overlay">
-                    <span
-                      class="hover-button"
-                      data-lang-vi="Xem ngay"
-                      data-lang-en="See now"
-                    >
-                      Xem ngay
-                    </span>
-                  </div>
-                  <div class="shine"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Combo dịch vụ -->
     <section>
       <div class="why-footer">
@@ -451,7 +140,6 @@
           class="why-logo"
           loading="lazy"
         />
-
         <h2
           class="why-title"
           data-lang-vi="Combo Dịch Vụ"
@@ -459,15 +147,6 @@
         >
           Combo Dịch Vụ
         </h2>
-
-        <p
-          class="why-description"
-          data-lang-vi="Tận hưởng những niềm vui nhỏ trong cuộc sống tại không gian yên bình của Star Vip Massage."
-          data-lang-en="Enjoy the little joys of life in the peaceful ambiance of Star Vip Massage."
-        >
-          Tận hưởng những niềm vui nhỏ trong cuộc sống tại không gian yên bình
-          của <strong>Star Vip Massage</strong>.
-        </p>
       </div>
 
       <div class="slider-wrapper">
@@ -478,7 +157,12 @@
             role="region"
             aria-live="polite"
           >
-            <div class="combo-card">
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
               <a href="/html/dichvu/vip4.html">
                 <div class="combo-img-wrapper">
                   <img
@@ -544,7 +228,12 @@
               </div>
             </div>
 
-            <div class="combo-card">
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
               <a href="/html/dichvu/vip3.html">
                 <div class="combo-img-wrapper">
                   <img
@@ -603,7 +292,12 @@
               </div>
             </div>
 
-            <div class="combo-card">
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <a href="/html/dichvu/vip2.html">
                 <div class="combo-img-wrapper">
                   <img
@@ -662,7 +356,12 @@
               </div>
             </div>
 
-            <div class="combo-card">
+            <div
+              class="combo-card"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="400"
+            >
               <a href="/html/dichvu/vip1.html">
                 <div class="combo-img-wrapper">
                   <img
@@ -715,11 +414,6 @@
             </div>
           </div>
         </div>
-
-        <div class="slider-buttons">
-          <button onclick="moveSlide(-1)" aria-label="Previous slide">❮</button>
-          <button onclick="moveSlide(1)" aria-label="Next slide">❯</button>
-        </div>
       </div>
     </section>
 
@@ -740,7 +434,6 @@
           ></iframe>
         </div>
       </div>
-
       <div class="branch">
         <h3>CS2 – GOLD VIP MASSAGE</h3>
         <p>136 Hồ Tùng Mậu (Cổng KĐT Goldmark City)</p>
@@ -756,7 +449,6 @@
           ></iframe>
         </div>
       </div>
-
       <div class="branch">
         <h3>CS3 – X-MEN VIP MASSAGE</h3>
         <p>222 Cầu Bươu – Xa La – Hà Đông</p>
@@ -772,7 +464,6 @@
           ></iframe>
         </div>
       </div>
-
       <div class="branch">
         <h3>CS4 – NNL VIP MASSAGE</h3>
         <p>609 Lạc Long Quân – Tây Hồ</p>
@@ -788,7 +479,6 @@
           ></iframe>
         </div>
       </div>
-
       <div class="branch">
         <h3>CS5 – MIDU VIP MASSAGE</h3>
         <p>178 Đình Thôn, Mỹ Đình, Hà Nội</p>
@@ -804,7 +494,6 @@
           ></iframe>
         </div>
       </div>
-
       <div class="branch">
         <h3>CS6 – MISAKI VIP MASSAGE</h3>
         <p>41 Nguyễn Như Uyên – Cầu Giấy – Hà Nội</p>
@@ -821,12 +510,34 @@
         </div>
       </div>
     </section>
-    <audio controls autoplay loop>
-      <source src="/sound/Mental Stillness.mp3" type="audio/mpeg" />
-      Trình duyệt của bạn không hỗ trợ âm thanh.
-    </audio>
 
-    <!-- SCRIPT SLIDER / MAIN -->
-    <script src="/js/main.js"></script>
+    <script>
+      document.querySelectorAll(".fixed-icons a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          console.log("Clicked:", link.href);
+        });
+      });
+
+      // Slider navigation
+      const sliderTrack = document.getElementById("sliderTrack");
+      const prevButton = document.querySelector(".slider-buttons .prev");
+      const nextButton = document.querySelector(".slider-buttons .next");
+      let scrollAmount = 0;
+
+      nextButton.addEventListener("click", () => {
+        scrollAmount += sliderTrack.offsetWidth;
+        if (scrollAmount >= sliderTrack.scrollWidth - sliderTrack.offsetWidth) {
+          scrollAmount = sliderTrack.scrollWidth - sliderTrack.offsetWidth;
+        }
+        sliderTrack.scrollTo({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      prevButton.addEventListener("click", () => {
+        scrollAmount -= sliderTrack.offsetWidth;
+        if (scrollAmount < 0) scrollAmount = 0;
+        sliderTrack.scrollTo({ left: scrollAmount, behavior: "smooth" });
+      });
+    </script>
+    <script src="/js/main2.js"></script>
   </body>
 </html>

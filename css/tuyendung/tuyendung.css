@@ -1,0 +1,488 @@
+.combo1-banner {
+  width: 100%;
+  height: 160px;
+  background-image: url("/img/so3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px; /* đổi số tùy ý */
+}
+
+.combo1-banner h2 {
+  font-family: "Montserrat", sans-serif; /* hoặc bạn gửi tui font đúng để áp vào */
+  font-weight: 900;
+  font-size: 36px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* hiệu ứng mờ như ảnh */
+  margin: 0;
+}
+/* ==========================
+   RESET + GLOBAL STYLE
+   ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff0f5;
+  color: black;
+  padding-top: 160px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ==========================
+   HEADER & MENU
+   ========================== */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 110px;
+  padding: 0 60px;
+  background: rgb(253, 209, 209);
+  /* quan trọng đổi màu thanh menu trong suốt */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.nav-left a,
+.nav-right a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-left a span,
+.nav-right a span {
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.nav-left span.active::after,
+.nav-right span.active::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #ff4081;
+  animation: snakeEffect 6s infinite ease-in-out;
+  clip-path: inset(0 100% 0 0);
+}
+
+@keyframes snakeEffect {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  25% {
+    clip-path: inset(0 0% 0 0);
+  }
+  50% {
+    clip-path: inset(0 0% 0 100%);
+  }
+  50.001% {
+    clip-path: inset(0 0% 0 100%);
+  }
+  75% {
+    clip-path: inset(0 0% 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+/* LOGO GIỮA */
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.nav-logo img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  animation: logoPulse 3s infinite ease-in-out;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.3));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 50, 50, 0.5));
+}
+
+@keyframes logoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(255, 50, 50, 0.6));
+  }
+}
+
+/* NAV ITEM CĂN CHỈNH ICON + TEXT */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  text-align: center;
+  padding: 0 10px;
+  color: red;
+  text-decoration: none;
+  min-width: 120px;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 2px;
+}
+
+.icon-text i {
+  font-size: 22px;
+}
+
+.icon-text span {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  text-align: center;
+}
+/* ==========================
+   NGÔN NGỮ DROPDOWN (CỜ)
+   ========================== */
+.language-switcher {
+  position: relative;
+  min-width: 120px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.language-switcher .icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 4px;
+}
+
+.language-switcher .icon {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.language-switcher span {
+  font-size: 12px;
+  color: black;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Dropdown */
+.lang-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  padding: 6px 0;
+  min-width: 120px;
+  z-index: 100;
+}
+
+.lang-options li {
+  list-style: none;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.lang-options li:hover {
+  background: #eee;
+}
+
+.lang-options img {
+  width: 25px;
+  height: auto;
+}
+/* ==========================
+   ICON CỐ ĐỊNH
+   ========================== */
+.fixed-icons {
+  position: fixed;
+  top: 60%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+.fixed-icons a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  padding: 6px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s ease-in-out infinite;
+  pointer-events: auto;
+}
+
+.fixed-icons a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fixed-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(0, 132, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0);
+  }
+}
+
+/* ==========================
+   GOOGLE MAP CÁC CƠ SỞ
+   ========================== */
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 60px;
+  background: #f5f5f5;
+}
+
+.branch {
+  width: calc(33.333% - 20px);
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  text-align: center;
+}
+
+.branch h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0056b3;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.branch h3::after {
+  content: "";
+  display: block;
+  height: 0.7px;
+  width: 45%;
+  background: #0056b3;
+  margin-top: 6px;
+  border-radius: 10px;
+}
+
+.branch p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.branch .map {
+  width: 90%;
+  height: 235px;
+  margin: 14px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.branch .map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: auto;
+}
+
+.intro-section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* BÊN TRÁI */
+.left-section {
+  flex: 1 1 48%;
+}
+
+.recruit-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recruit-title {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+.recruit-title:hover {
+  color: #e91e63;
+}
+
+.recruit-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* BÊN PHẢI */
+.col-right {
+  flex: 1 1 48%;
+}
+
+.col-right h3 {
+  font-size: 20px;
+  color: #c2185b;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e91e63;
+  padding-bottom: 8px;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: #ffe9f0;
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .intro-wrapper {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .col-right {
+    flex: 1 1 100%;
+  }
+}
